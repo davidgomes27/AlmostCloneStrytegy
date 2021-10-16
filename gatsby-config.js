@@ -3,5 +3,16 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "myapi",
   },
-  plugins: ["gatsby-plugin-styled-components"],
+  plugins: [
+    "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "alldata",
+        fieldName: "alldata",
+        url: "https://api-us-east-1.graphcms.com/v2/cku8rn8ke432y01xhd8ds3old/master",
+      }
+    }
+  
+  ],
 };
